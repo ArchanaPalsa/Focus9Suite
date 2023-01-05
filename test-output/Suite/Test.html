@@ -1,0 +1,1490 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>69/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jan 04 10:07:28 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>3326 seconds (3326819 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintBarcodeIntoPDFandValidatePDF()'><b>checkPrintBarcodeIntoPDFandValidatePDF</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-139389963" onClick='toggleBox("Output-139389963", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-139389963" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-139389963">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPrintBarcodeIntoPDFandValidatePDF<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Failed<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.focus.Pages.VoucherPrintOptionsPage.checkPrintBarcodeIntoPDFandValidatePDF(VoucherPrintOptionsPage.java:36300)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintBarcodeIntoPDFandValidatePDF(FooterValuesAndBarcodeValidationTest.java:173)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace139389963", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace139389963'><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.focus.Pages.VoucherPrintOptionsPage.checkPrintBarcodeIntoPDFandValidatePDF(VoucherPrintOptionsPage.java:36300)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintBarcodeIntoPDFandValidatePDF(FooterValuesAndBarcodeValidationTest.java:173)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>13</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintBarcodePrintingWithItemSelection()'><b>checkPrintBarcodePrintingWithItemSelection</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1297044949" onClick='toggleBox("Output-1297044949", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1297044949" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1297044949">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPrintBarcodePrintingWithItemSelection<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Failed<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintBarcodePrintingWithItemSelection(FooterValuesAndBarcodeValidationTest.java:187)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1297044949", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1297044949'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:305)
+	at org.testng.Assert.assertEquals(Assert.java:315)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintBarcodePrintingWithItemSelection(FooterValuesAndBarcodeValidationTest.java:187)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>29</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintFromExcessInStockVoucherTransaction()'><b>checkPrintFromExcessInStockVoucherTransaction</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-679834436" onClick='toggleBox("Output-679834436", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-679834436" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-679834436">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPrintFromExcessInStockVoucherTransaction<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Failed<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td><div><pre>java.io.FileNotFoundException: D:\Focus9AllProjectSuite\FocusAI\autoIt\ExportFiles\savingExcessInStocksPrint.pdf (The system cannot find the file specified)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(Unknown Source)
+	at java.io.RandomAccessFile.&lt;init&gt;(Unknown Source)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:99)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1006)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:969)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:917)
+	at com.testautomationguru.utility.PDFUtil.getPDFText(PDFUtil.java:239)
+	at com.testautomationguru.utility.PDFUtil.comparepdfFilesWithTextMode(PDFUtil.java:323)
+	at com.testautomationguru.utility.PDFUtil.comparePdfFiles(PDFUtil.java:316)
+	at com.testautomationguru.utility.PDFUtil.compare(PDFUtil.java:278)
+	at com.focus.Pages.VoucherPrintOptionsPage.checkPrintFromExcessInStockVoucherTransaction(VoucherPrintOptionsPage.java:41503)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintFromExcessInStockVoucherTransaction(FooterValuesAndBarcodeValidationTest.java:534)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace679834436", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace679834436'><pre>java.io.FileNotFoundException: D:\Focus9AllProjectSuite\FocusAI\autoIt\ExportFiles\savingExcessInStocksPrint.pdf (The system cannot find the file specified)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(Unknown Source)
+	at java.io.RandomAccessFile.&lt;init&gt;(Unknown Source)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:99)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1006)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:969)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:917)
+	at com.testautomationguru.utility.PDFUtil.getPDFText(PDFUtil.java:239)
+	at com.testautomationguru.utility.PDFUtil.comparepdfFilesWithTextMode(PDFUtil.java:323)
+	at com.testautomationguru.utility.PDFUtil.comparePdfFiles(PDFUtil.java:316)
+	at com.testautomationguru.utility.PDFUtil.compare(PDFUtil.java:278)
+	at com.focus.Pages.VoucherPrintOptionsPage.checkPrintFromExcessInStockVoucherTransaction(VoucherPrintOptionsPage.java:41503)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintFromExcessInStockVoucherTransaction(FooterValuesAndBarcodeValidationTest.java:534)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>64</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintInExcessStocksInUserLevel()'><b>checkPrintInExcessStocksInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-177996731" onClick='toggleBox("Output-177996731", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-177996731" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-177996731">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPrintInExcessStocksInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Failed<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.focus.Pages.VoucherPrintOptionsPage.checkPrintInExcessStocksInUserLevel(VoucherPrintOptionsPage.java:41855)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintInExcessStocksInUserLevel(FooterValuesAndBarcodeValidationTest.java:562)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace177996731", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace177996731'><pre>java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.focus.Pages.VoucherPrintOptionsPage.checkPrintInExcessStocksInUserLevel(VoucherPrintOptionsPage.java:41855)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintInExcessStocksInUserLevel(FooterValuesAndBarcodeValidationTest.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>34</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkStockLedgerIconsInUserLevelandValidateAnalyzeReport()'><b>checkStockLedgerIconsInUserLevelandValidateAnalyzeReport</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-2138997952" onClick='toggleBox("Output-2138997952", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2138997952" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2138997952">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkStockLedgerIconsInUserLevelandValidateAnalyzeReport<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Failed<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkStockLedgerIconsInUserLevelandValidateAnalyzeReport(FooterValuesAndBarcodeValidationTest.java:480)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2138997952", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2138997952'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:305)
+	at org.testng.Assert.assertEquals(Assert.java:315)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkStockLedgerIconsInUserLevelandValidateAnalyzeReport(FooterValuesAndBarcodeValidationTest.java:480)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSuspendVoucherandEditSuspendedVoucher()'><b>checkSuspendVoucherandEditSuspendedVoucher</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1029986984" onClick='toggleBox("Output-1029986984", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1029986984" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1029986984">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSuspendVoucherandEditSuspendedVoucher<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Failed<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSuspendVoucherandEditSuspendedVoucher(FooterValuesAndBarcodeValidationTest.java:458)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1029986984", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1029986984'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:305)
+	at org.testng.Assert.assertEquals(Assert.java:315)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSuspendVoucherandEditSuspendedVoucher(FooterValuesAndBarcodeValidationTest.java:458)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>23</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checksavePurchaseVouchers()'><b>checksavePurchaseVouchers</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-2071143" onClick='toggleBox("Output-2071143", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2071143" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2071143">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checksavePurchaseVouchers<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Failed<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checksavePurchaseVouchers(FooterValuesAndBarcodeValidationTest.java:75)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2071143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2071143'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:305)
+	at org.testng.Assert.assertEquals(Assert.java:315)
+	at com.focus.testcases.FooterValuesAndBarcodeValidationTest.checksavePurchaseVouchers(FooterValuesAndBarcodeValidationTest.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>92</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.CheckCreateUserInSU()'><b>CheckCreateUserInSU</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1692377527" onClick='toggleBox("Output-1692377527", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1692377527" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1692377527">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.CheckCreateUserInSU<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checKValidatePurchaseVoucherVATRestrictionInUserLevel()'><b>checKValidatePurchaseVoucherVATRestrictionInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-342802731" onClick='toggleBox("Output-342802731", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-342802731" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-342802731">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checKValidatePurchaseVoucherVATRestrictionInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkAnalyzeStockLedgerInUserLevel()'><b>checkAnalyzeStockLedgerInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-40859241" onClick='toggleBox("Output-40859241", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-40859241" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-40859241">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkAnalyzeStockLedgerInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>64</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkAvailableOptionsBarCodeDefinition()'><b>checkAvailableOptionsBarCodeDefinition</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1311625080" onClick='toggleBox("Output-1311625080", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1311625080" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1311625080">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkAvailableOptionsBarCodeDefinition<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkBarcodeIsbeenScannedInDeliveryNotesVoucher()'><b>checkBarcodeIsbeenScannedInDeliveryNotesVoucher</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-199368708" onClick='toggleBox("Output-199368708", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-199368708" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-199368708">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkBarcodeIsbeenScannedInDeliveryNotesVoucher<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>130</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkChangeFieldPropertiesInBarcodeLayout()'><b>checkChangeFieldPropertiesInBarcodeLayout</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1779329132" onClick='toggleBox("Output-1779329132", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1779329132" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1779329132">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkChangeFieldPropertiesInBarcodeLayout<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>82</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkCreateLayoutForBarCode()'><b>checkCreateLayoutForBarCode</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1764558461" onClick='toggleBox("Output-1764558461", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1764558461" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1764558461">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkCreateLayoutForBarCode<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>197</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkCreateNewMRNVoucher()'><b>checkCreateNewMRNVoucher</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-987867109" onClick='toggleBox("Output-987867109", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-987867109" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-987867109">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkCreateNewMRNVoucher<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkCreateProfileWithHomeFinancialsReportRestrictions()'><b>checkCreateProfileWithHomeFinancialsReportRestrictions</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-334361218" onClick='toggleBox("Output-334361218", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-334361218" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-334361218">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkCreateProfileWithHomeFinancialsReportRestrictions<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>48</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkDefinedStandardRateForSTDItem()'><b>checkDefinedStandardRateForSTDItem</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1553047368" onClick='toggleBox("Output-1553047368", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1553047368" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1553047368">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkDefinedStandardRateForSTDItem<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkEditingSavedSalesNewVoucherByAddingRow2()'><b>checkEditingSavedSalesNewVoucherByAddingRow2</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-132353877" onClick='toggleBox("Output-132353877", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-132353877" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-132353877">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkEditingSavedSalesNewVoucherByAddingRow2<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>129</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkEditingSavedSalesNewVoucherWithIgstValueDeduction()'><b>checkEditingSavedSalesNewVoucherWithIgstValueDeduction</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1824503996" onClick='toggleBox("Output-1824503996", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1824503996" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1824503996">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkEditingSavedSalesNewVoucherWithIgstValueDeduction<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>206</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkEnableAllAccessightsInAccountForTestRestrictionProfile()'><b>checkEnableAllAccessightsInAccountForTestRestrictionProfile</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1330154190" onClick='toggleBox("Output-1330154190", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1330154190" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1330154190">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkEnableAllAccessightsInAccountForTestRestrictionProfile<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkEnablePurchaseVoucherVatAccessRightsForSavingVoucher()'><b>checkEnablePurchaseVoucherVatAccessRightsForSavingVoucher</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1869484296" onClick='toggleBox("Output-1869484296", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1869484296" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1869484296">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkEnablePurchaseVoucherVatAccessRightsForSavingVoucher<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkEnableRestOfTheAccessRightInPvVAT()'><b>checkEnableRestOfTheAccessRightInPvVAT</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-393641208" onClick='toggleBox("Output-393641208", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-393641208" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-393641208">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkEnableRestOfTheAccessRightInPvVAT<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkEnableRestOfTheRightsInStockLedger()'><b>checkEnableRestOfTheRightsInStockLedger</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-930972542" onClick='toggleBox("Output-930972542", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-930972542" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-930972542">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkEnableRestOfTheRightsInStockLedger<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkEnableStockLedgerAccessRightsForAccessingReports()'><b>checkEnableStockLedgerAccessRightsForAccessingReports</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1743245662" onClick='toggleBox("Output-1743245662", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1743245662" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1743245662">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkEnableStockLedgerAccessRightsForAccessingReports<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>38</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkFieldPostToAccountInPurchaseVouchers()'><b>checkFieldPostToAccountInPurchaseVouchers</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1663436849" onClick='toggleBox("Output-1663436849", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1663436849" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1663436849">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkFieldPostToAccountInPurchaseVouchers<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkFilterOptionInStockLedger()'><b>checkFilterOptionInStockLedger</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1668644166" onClick='toggleBox("Output-1668644166", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1668644166" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1668644166">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkFilterOptionInStockLedger<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkGiveAccessandShowHomePageAccessToAccountInTestRestrictionProfile()'><b>checkGiveAccessandShowHomePageAccessToAccountInTestRestrictionProfile</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1804540935" onClick='toggleBox("Output-1804540935", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1804540935" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1804540935">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkGiveAccessandShowHomePageAccessToAccountInTestRestrictionProfile<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkGiveAccessandShowHomePageAccessToPVVATInTestRestrictionProfile()'><b>checkGiveAccessandShowHomePageAccessToPVVATInTestRestrictionProfile</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-359008825" onClick='toggleBox("Output-359008825", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-359008825" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-359008825">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkGiveAccessandShowHomePageAccessToPVVATInTestRestrictionProfile<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>67</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkGiveAccessandShowHomePageAccessToStockLedgerInUserLevel()'><b>checkGiveAccessandShowHomePageAccessToStockLedgerInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1527394975" onClick='toggleBox("Output-1527394975", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1527394975" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1527394975">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkGiveAccessandShowHomePageAccessToStockLedgerInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLoadAnalysisReport()'><b>checkLoadAnalysisReport</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-2141892082" onClick='toggleBox("Output-2141892082", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2141892082" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2141892082">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLoadAnalysisReport<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogin()'><b>checkLogin</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-844264574" onClick='toggleBox("Output-844264574", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-844264574" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-844264574">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogin<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.URLBrowserTest.checkLoginPageTitleByURLInputInBrowser()'><b>checkLoginPageTitleByURLInputInBrowser</b><br>Test class: com.focus.testcases.URLBrowserTest<br/>
+<a href="#Output-681158875" onClick='toggleBox("Output-681158875", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-681158875" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-681158875">
+Completed executing following method : URLBrowserTest.checkLoginPageTitleByURLInputInBrowser<br/>
+Test Method resides in com.focus.testcases.URLBrowserTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>com.focus.testcases.URLBrowserTest@7b49cea0</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithSU()'><b>checkLogoutAndLoginWithSU</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1015114546" onClick='toggleBox("Output-1015114546", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1015114546" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1015114546">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithSU<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithSUForAccessRights()'><b>checkLogoutAndLoginWithSUForAccessRights</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1975778952" onClick='toggleBox("Output-1975778952", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1975778952" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1975778952">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithSUForAccessRights<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithSUForAccessRightsInPVVAT()'><b>checkLogoutAndLoginWithSUForAccessRightsInPVVAT</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1842579954" onClick='toggleBox("Output-1842579954", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1842579954" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1842579954">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithSUForAccessRightsInPVVAT<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithSUForUserCreation()'><b>checkLogoutAndLoginWithSUForUserCreation</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1030101314" onClick='toggleBox("Output-1030101314", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1030101314" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1030101314">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithSUForUserCreation<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithTestUser()'><b>checkLogoutAndLoginWithTestUser</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-820815454" onClick='toggleBox("Output-820815454", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-820815454" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-820815454">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLoginWithTestUser<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLogoutWithCreatedUserForValidations()'><b>checkLogoutAndLogoutWithCreatedUserForValidations</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1396877567" onClick='toggleBox("Output-1396877567", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1396877567" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1396877567">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLogoutWithCreatedUserForValidations<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLogoutWithCrestedUser()'><b>checkLogoutAndLogoutWithCrestedUser</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-2047227050" onClick='toggleBox("Output-2047227050", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2047227050" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2047227050">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLogoutWithCrestedUser<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLogoutWithCrestedUserAfterGivingPermissionsForAccount()'><b>checkLogoutAndLogoutWithCrestedUserAfterGivingPermissionsForAccount</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-529581509" onClick='toggleBox("Output-529581509", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-529581509" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-529581509">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLogoutWithCrestedUserAfterGivingPermissionsForAccount<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkLogoutAndLogoutWithCrestedUserAfterGivingPermissionsForProfile()'><b>checkLogoutAndLogoutWithCrestedUserAfterGivingPermissionsForProfile</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1535313625" onClick='toggleBox("Output-1535313625", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1535313625" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1535313625">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkLogoutAndLogoutWithCrestedUserAfterGivingPermissionsForProfile<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkMenuSelectedInProfileAreReflectingInUserLevel()'><b>checkMenuSelectedInProfileAreReflectingInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1024693121" onClick='toggleBox("Output-1024693121", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1024693121" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1024693121">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkMenuSelectedInProfileAreReflectingInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkOtherToolsOptionsAccountsMenu()'><b>checkOtherToolsOptionsAccountsMenu</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-905540548" onClick='toggleBox("Output-905540548", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-905540548" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-905540548">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkOtherToolsOptionsAccountsMenu<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPostingDetailsAndCopyToClipBoardOptionsInPVVAT()'><b>checkPostingDetailsAndCopyToClipBoardOptionsInPVVAT</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1102526157" onClick='toggleBox("Output-1102526157", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1102526157" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1102526157">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPostingDetailsAndCopyToClipBoardOptionsInPVVAT<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintBarcodePopupFields()'><b>checkPrintBarcodePopupFields</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-228369097" onClick='toggleBox("Output-228369097", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-228369097" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-228369097">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPrintBarcodePopupFields<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintBarcodePrintingWithManualQuantityPick()'><b>checkPrintBarcodePrintingWithManualQuantityPick</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1809420712" onClick='toggleBox("Output-1809420712", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1809420712" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1809420712">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPrintBarcodePrintingWithManualQuantityPick<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>27</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPrintOptionInUserLevel()'><b>checkPrintOptionInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1396717274" onClick='toggleBox("Output-1396717274", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1396717274" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1396717274">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPrintOptionInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPurchaseVarianceInPostingDeatilsByGivingExactStandardRate()'><b>checkPurchaseVarianceInPostingDeatilsByGivingExactStandardRate</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-921499120" onClick='toggleBox("Output-921499120", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-921499120" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-921499120">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPurchaseVarianceInPostingDeatilsByGivingExactStandardRate<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>68</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPurchaseVarianceInPostingDetailsForSTDItem()'><b>checkPurchaseVarianceInPostingDetailsForSTDItem</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1958101721" onClick='toggleBox("Output-1958101721", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1958101721" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1958101721">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPurchaseVarianceInPostingDetailsForSTDItem<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>71</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkPurchaseVoucherVATVisibilityInPurchasesMenuInUserLevel()'><b>checkPurchaseVoucherVATVisibilityInPurchasesMenuInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-886288268" onClick='toggleBox("Output-886288268", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-886288268" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-886288268">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkPurchaseVoucherVATVisibilityInPurchasesMenuInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSaveAccountAfterAccessingRights()'><b>checkSaveAccountAfterAccessingRights</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-211903806" onClick='toggleBox("Output-211903806", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-211903806" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-211903806">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSaveAccountAfterAccessingRights<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSaveBarcodeDefinitionWithAllInputs()'><b>checkSaveBarcodeDefinitionWithAllInputs</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-2081664430" onClick='toggleBox("Output-2081664430", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2081664430" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2081664430">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSaveBarcodeDefinitionWithAllInputs<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>83</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSaveBarcodeDefinitionWithoutTemplateName()'><b>checkSaveBarcodeDefinitionWithoutTemplateName</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-358291324" onClick='toggleBox("Output-358291324", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-358291324" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-358291324">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSaveBarcodeDefinitionWithoutTemplateName<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSaveBarcodeVoucherWithBatchItem()'><b>checkSaveBarcodeVoucherWithBatchItem</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1079648105" onClick='toggleBox("Output-1079648105", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1079648105" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1079648105">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSaveBarcodeVoucherWithBatchItem<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>114</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSaveExcessInStocksInUserLevel()'><b>checkSaveExcessInStocksInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1157219468" onClick='toggleBox("Output-1157219468", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1157219468" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1157219468">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSaveExcessInStocksInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSaveExcessInStocksVoucher()'><b>checkSaveExcessInStocksVoucher</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-104757933" onClick='toggleBox("Output-104757933", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-104757933" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-104757933">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSaveExcessInStocksVoucher<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSavePrintLayoutAndPrintOptionInOutputOptions()'><b>checkSavePrintLayoutAndPrintOptionInOutputOptions</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1756432697" onClick='toggleBox("Output-1756432697", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1756432697" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1756432697">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSavePrintLayoutAndPrintOptionInOutputOptions<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>150</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSavePurchaseVoucherVAT()'><b>checkSavePurchaseVoucherVAT</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-782980359" onClick='toggleBox("Output-782980359", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-782980359" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-782980359">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSavePurchaseVoucherVAT<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>61</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSaveRoleWithCreatedProfileForRestrictions()'><b>checkSaveRoleWithCreatedProfileForRestrictions</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1424267209" onClick='toggleBox("Output-1424267209", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1424267209" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1424267209">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSaveRoleWithCreatedProfileForRestrictions<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSaveSalesInvoiceNewVoucherWithDecimalValueRates()'><b>checkSaveSalesInvoiceNewVoucherWithDecimalValueRates</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-290021883" onClick='toggleBox("Output-290021883", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-290021883" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-290021883">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSaveSalesInvoiceNewVoucherWithDecimalValueRates<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>202</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSavedProfileWithUnselectedRestrictions()'><b>checkSavedProfileWithUnselectedRestrictions</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-414527073" onClick='toggleBox("Output-414527073", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-414527073" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-414527073">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSavedProfileWithUnselectedRestrictions<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSavedPurchaseVoucherVATForCopyPastePostingDetailsSettingsDeleteDoc()'><b>checkSavedPurchaseVoucherVATForCopyPastePostingDetailsSettingsDeleteDoc</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1165103264" onClick='toggleBox("Output-1165103264", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1165103264" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1165103264">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSavedPurchaseVoucherVATForCopyPastePostingDetailsSettingsDeleteDoc<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSavingSalesInvoiceNewVoucherWithRow1InBodyGrid()'><b>checkSavingSalesInvoiceNewVoucherWithRow1InBodyGrid</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1935880752" onClick='toggleBox("Output-1935880752", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1935880752" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1935880752">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSavingSalesInvoiceNewVoucherWithRow1InBodyGrid<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>152</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkSettingsBtnDeleteBtnnUserLevel()'><b>checkSettingsBtnDeleteBtnnUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1553094223" onClick='toggleBox("Output-1553094223", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1553094223" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1553094223">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkSettingsBtnDeleteBtnnUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkStockLedgerAfterAccessingRights()'><b>checkStockLedgerAfterAccessingRights</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1200454195" onClick='toggleBox("Output-1200454195", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1200454195" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1200454195">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkStockLedgerAfterAccessingRights<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkStockLedgerVisibilityInReports()'><b>checkStockLedgerVisibilityInReports</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1295375207" onClick='toggleBox("Output-1295375207", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1295375207" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1295375207">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkStockLedgerVisibilityInReports<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkToolsOptionsAccountsMenu()'><b>checkToolsOptionsAccountsMenu</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1902659452" onClick='toggleBox("Output-1902659452", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1902659452" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1902659452">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkToolsOptionsAccountsMenu<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkUserCreationForCreatedRoleForRestrictions()'><b>checkUserCreationForCreatedRoleForRestrictions</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1222250580" onClick='toggleBox("Output-1222250580", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1222250580" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1222250580">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkUserCreationForCreatedRoleForRestrictions<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkValidateAccountAccessInUserLevel()'><b>checkValidateAccountAccessInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-935497816" onClick='toggleBox("Output-935497816", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-935497816" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-935497816">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkValidateAccountAccessInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>82</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkValidateAccountVisibilityInUserLevel()'><b>checkValidateAccountVisibilityInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1169457940" onClick='toggleBox("Output-1169457940", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1169457940" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1169457940">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkValidateAccountVisibilityInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkValidateEnabledRightsInProfileInUserLevel()'><b>checkValidateEnabledRightsInProfileInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-247225466" onClick='toggleBox("Output-247225466", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-247225466" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-247225466">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkValidateEnabledRightsInProfileInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkValidateStockLedgerReportRestrictionInUserLevel()'><b>checkValidateStockLedgerReportRestrictionInUserLevel</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-964374744" onClick='toggleBox("Output-964374744", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-964374744" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-964374744">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkValidateStockLedgerReportRestrictionInUserLevel<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checkVoucherSavedBySUIsVisibleInTestUser()'><b>checkVoucherSavedBySUIsVisibleInTestUser</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-1026454281" onClick='toggleBox("Output-1026454281", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1026454281" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1026454281">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checkVoucherSavedBySUIsVisibleInTestUser<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checklogout()'><b>checklogout</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-2108821694" onClick='toggleBox("Output-2108821694", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2108821694" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2108821694">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checklogout<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.FooterValuesAndBarcodeValidationTest.checksaveDefinitionWithoutSelectingFields()'><b>checksaveDefinitionWithoutSelectingFields</b><br>Test class: com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+<a href="#Output-766364278" onClick='toggleBox("Output-766364278", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-766364278" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-766364278">
+Completed executing following method : FooterValuesAndBarcodeValidationTest.checksaveDefinitionWithoutSelectingFields<br/>
+Test Method resides in com.focus.testcases.FooterValuesAndBarcodeValidationTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>com.focus.testcases.FooterValuesAndBarcodeValidationTest@887af79</td></tr>
+<tr>
+<td title='com.focus.testcases.URLBrowserTest.verifyBrowserOpen()'><b>verifyBrowserOpen</b><br>Test class: com.focus.testcases.URLBrowserTest<br/>
+<a href="#Output-1824570614" onClick='toggleBox("Output-1824570614", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1824570614" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1824570614">
+Completed executing following method : URLBrowserTest.verifyBrowserOpen<br/>
+Test Method resides in com.focus.testcases.URLBrowserTest<br/>
+Test Status: Pass<br/>
+About to begin executing following method : BaseEngine.afterMethodExecution<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.focus.testcases.URLBrowserTest@7b49cea0</td></tr>
+</table><p>
+</body>
+</html>
