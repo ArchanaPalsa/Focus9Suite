@@ -10,14 +10,14 @@
 	<class name="com.focus.testcases.URLBrowserTest" />
 	
 
-	<!-- <class name="com.focus.testcases.LoginPageTest" />
+	<class name="com.focus.testcases.LoginPageTest" />
 	<class name="com.focus.testcases.VoucherPrintOptionsTest" />
 	<class name="com.focus.testcases.FooterValuesAndBarcodeValidationTest" />
 
 
 	<class name="com.focus.testcases.UserRestrictionsTest" />
 	<class name="com.focus.testcases.FocusInventoryReportsTest" />
-	<class name="com.focus.testcases.FocusFinancialsReportTest" /> -->
+	<class name="com.focus.testcases.FocusFinancialsReportTest" />
  
 
 	<class name="com.focus.testcases.AccountPropertiesTest" />
